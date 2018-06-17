@@ -1,0 +1,8 @@
+{% extends 'base_layout.htm' %}
+
+{% block content %}
+  <h2>{{ user.get_full_name }}</h2>
+  <ul>
+    <li>Username: {{ user.username }}</li>
+  </ul>
+{% endblock %}
