@@ -1,8 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
+from articles.choices import *
 
 class Article(models.Model):
     title = models.CharField(max_length=100)
+    feel = models.IntegerField(choices=FEEL_CHOICE, default=1)
     slug = models.SlugField()
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
